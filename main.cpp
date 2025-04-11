@@ -2,6 +2,9 @@
 
 const char kWindowTitle[] = "LC1C_10_ソネ_タイセイ_タイトル";
 
+static const int kRowHeight = 20;
+static const int kColumnWidth = 44;
+
 /*========================================================
 ＊構造体
 ========================================================*/
@@ -16,9 +19,6 @@ struct Vector2 {
 	float x;
 	float y;
 };
-
-static const int kRowHeight = 20;
-static const int kColumnWidth = 44;
 
 /*========================================================
 ＊関数
@@ -43,7 +43,7 @@ Matrix2x2 Subtract(Matrix2x2 matrix1, Matrix2x2 matrix2);
 /* 積*/
 Matrix2x2 Multiply(Matrix2x2 matrix1, Matrix2x2 matrix2);
 
-/* 行列と積*/
+/* ベクトルと積*/
 Vector2 Multiply(Vector2 vector, Matrix2x2 matrix);
 
 
@@ -181,7 +181,7 @@ Matrix2x2 Multiply(Matrix2x2 matrix1, Matrix2x2 matrix2) {
 	return result;
 }
 
-/* 行列と積*/
+/* ベクトルと積*/
 Vector2 Multiply(Vector2 vector, Matrix2x2 matrix) {
 	Vector2 result;
 
